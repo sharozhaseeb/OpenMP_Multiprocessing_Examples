@@ -1,0 +1,33 @@
+To compile and run the C code with OpenMP directives in Ubuntu, you can follow these steps:
+
+Install the OpenMP compiler:
+
+If you have not already installed it, you can install the OpenMP compiler for C by running the following command in the terminal:
+
+csharp
+Copy code
+sudo apt-get install gcc
+Save the C code to a file:
+
+Save the C code that includes the OpenMP directives to a file with a .c extension, for example openmp_example.c.
+
+Compile the C code:
+
+To compile the C code with OpenMP support, you need to add the -fopenmp flag to the gcc command. Run the following command in the terminal:
+
+Copy code
+gcc -fopenmp openmp_example.c -o openmp_example
+This will create an executable file called openmp_example.
+
+Run the executable:
+
+To run the executable file, simply run the following command in the terminal:
+
+bash
+Copy code
+./openmp_example
+This will run the program and output the results to the terminal. Note that the number of threads used by the program can be controlled through the OMP_NUM_THREADS environment variable, which you can set before running the program. For example, to use 4 threads, you can run the following command:
+
+bash
+Copy code
+OMP_NUM_THREADS=4 ./openmp_example
